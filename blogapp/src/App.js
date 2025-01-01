@@ -60,7 +60,7 @@ function App() {
   };
     return (
         <div style={{ padding: "20px" }}>
-            <h1>AI Blog Generator</h1>
+            <h1 className="normal">AI Blog Generator</h1>
             <textarea
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
@@ -71,9 +71,9 @@ function App() {
             <button onClick={handleGenerate} disabled={loading}>
                 {loading ? "Generating..." : "Generate Blog"}
             </button>
-          
+            
             {blogContent && (
-                <div style={{ marginTop: "20px" }}>
+                <div>
                     <h2>Generated Blog:</h2>
                     <button onClick={handleDownload} style={{ marginTop: "10px" }}>
                         Download Blog as HTML
@@ -84,6 +84,7 @@ function App() {
                      
                 </div>
             )}
+          
           </div>
     );
 }
